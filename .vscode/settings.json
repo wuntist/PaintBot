@@ -1,0 +1,12 @@
+{
+    "editor.fontSize": 18,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Mojo 🔥",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
+}
