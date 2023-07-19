@@ -34,12 +34,16 @@ else:
     CSPgap = lineData[2]
     startingCSPx = lineData[3]
     startingCSPy = lineData[4]
-    int(CSPgap)
-    int(startingCSPx)
-    int(startingCSPy)
+    CSPgap = int(CSPgap)
+    startingCSPx = int(startingCSPx)
+    startingCSPy = int(startingCSPy)
+    newCSPy = startingCSPy
+    newCSPx = startingCSPx
     for i in range(18):
-     newCSPy =+ startingCSPy
+     newCSPy += CSPgap*i
      for i in range(8):
-      newCSPx =+ startingCSPx
-     allCSP.append((newCSPx, newCSPy))
+      newCSPx += CSPgap*i
+      allCSP.append((newCSPx, newCSPy))
+      newCSPx = startingCSPx
+     newCSPy = startingCSPy
     print(allCSP)
