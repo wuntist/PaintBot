@@ -1,5 +1,9 @@
 method: blockatepaint
-resolution: x
+resolution: 1920x1080
 cspgap: 25
 startingcspx: 15
 startingcspy: 475
+pixelgap: 10
+startingpixelx: ?
+startingpixely: ?
+vip: False

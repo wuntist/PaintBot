@@ -3,14 +3,17 @@ try:
     import win32api, win32con
     import time
     import keyboard
+    from filesys.file import *
 except ImportError:
     print("Could not import libraries.")
 
-startingCSPx = 15
-startingCSPy = 475
+readFileData("settings")
+
+startingCSPx = lineData[3]
+startingCSPy = lineData[4]
 CSPwidth = 8
 CSPlength = 16
-CSPgap = 25
+CSPgap = lineData[2]
 allCSP = []
 lastPixel = (0,0,0)
 
