@@ -2,3 +2,4 @@ TODO:
 
 - Work on pixel calculation
 - BetterDraw
+- VIP Support
