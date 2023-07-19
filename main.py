@@ -1,6 +1,5 @@
 try:
-    from pyroblox.pyroblox import Chat, Window
-    from pyroblox.pyroblox import *
+    from pyroblox import *
     import win32api, win32con
     import time
     import keyboard
@@ -8,13 +7,12 @@ try:
 except ImportError:
     print("Could not import libraries.")
 
-readFileData("settings")
+readFileData("settingsHolder/settings")
 
-startingCSPx = lineData[3]
-startingCSPy = lineData[4]
-CSPwidth = 8
-CSPlength = 16
-CSPgap = lineData[2]
+method = lineData[0]
+print(method)
+imgres = lineData[9]
+vip = lineData[8]
 allCSP = []
 lastPixel = (0,0,0)
 
@@ -25,21 +23,23 @@ def betterClick(x,y):
     time.sleep(0.05)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
-Chat.say("!shout PaintBot Started Drawing.")
+# Chat.say("!shout PaintBot Started Drawing.")
 
 # CSP Calculator
 
-for i in range(CSPlength):
- for i in range(CSPwidth):
-  i = i + 1
-  newCSPx = startingCSPx + CSPgap*i
- i = i + 1
- newCSPy = startingCSPy + CSPgap*i
- allCSP.append((startingCSPx, startingCSPy))
-print(allCSP)
-
-while keyboard.is_pressed('q') == False:
- for i in allCSP:
-  print(i)
-  print(allCSP[i])
-  betterClick(allCSP[i])
+if vip == "True":
+   print("CSP Calculator Skipped")
+else:
+  if vip == "False":
+    CSPgap = lineData[2]
+    startingCSPx = lineData[3]
+    startingCSPy = lineData[4]
+    int(CSPgap)
+    int(startingCSPx)
+    int(startingCSPy)
+    for i in range(18):
+     newCSPy =+ startingCSPy
+     for i in range(8):
+      newCSPx =+ startingCSPx
+     allCSP.append((newCSPx, newCSPy))
+    print(allCSP)

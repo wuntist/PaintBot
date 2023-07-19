@@ -1,5 +1,4 @@
 TODO:
 
-- Publish pyroblox
 - Work on pixel calculation
 - BetterDraw
