@@ -1,5 +1,6 @@
 try:
-    import pyroblox # putting this darn thing up when i can
+    from pyroblox.pyroblox import Chat, Window
+    from pyroblox.pyroblox import *
     import win32api, win32con
     import time
     import keyboard
@@ -18,13 +19,13 @@ allCSP = []
 lastPixel = (0,0,0)
 
 def betterClick(x,y):
-    pyroblox.Window.focus()
+    Window.focus()
     win32api.SetCursorPos(x,y)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
     time.sleep(0.05)
     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 
-pyroblox.Chat.say("!shout PaintBot Started Drawing.")
+Chat.say("!shout PaintBot Started Drawing.")
 
 # CSP Calculator
 
