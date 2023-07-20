@@ -2,4 +2,6 @@ TODO:
 
 - Work on pixel calculation
 - BetterDraw
+- Turn main.py into a console app
+- Work on a java GUI for ease of use.
 - VIP Support

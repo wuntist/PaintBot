@@ -1,5 +1,4 @@
 Method that it will use to draw. (paintbucket or blockatepaint)
-Screen resolution that you are using.
 Color Setting Position Gap (useless if you have vip)
 Color Setting Position X (useless if you have vip)
 Color Setting Position Y (useless if you have vip)
