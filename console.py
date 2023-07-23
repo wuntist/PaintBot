@@ -1,0 +1,62 @@
+try:
+    import numpy as np
+    import subprocess
+    import sys
+    import keyboard
+    import time
+    from PIL import Image
+    from storage.pyroblox.pyroblox import Chat, Window
+    from storage.filesys.file import *
+except ImportError:
+    print("Could not import libraries.")
+
+method = sys.argv[1]
+imgres = sys.argv[2]
+vip = sys.argv[3]
+image = sys.argv[4]
+
+readFileData()
+
+keyboard.press("shift")
+time.sleep(0.2)
+keyboard.release("shift")
+Window.click(960,960)
+
+Chat.say("!shout PaintBot Started Drawing.")
+subprocess.call(["C:\Program Files\AutoHotkey\AutoHotkey.exe", "storage/vk2di.ahk"])
+
+
+if method == "blockatepaint":
+    if vip == "True":
+      print("CSP Calculator Skipped")
+    else:
+      if vip == "False":
+        allCSPx = []
+        allCSPy = []
+        CSPgap = lineData[2]
+        startingCSPx = lineData[3]
+        startingCSPy = lineData[4]
+        CSPgap = int(CSPgap)
+        startingCSPx = int(startingCSPx)
+        startingCSPy = int(startingCSPy)
+        newCSPy = startingCSPy
+        newCSPx = startingCSPx
+        for i in range(16):
+         newCSPy += CSPgap*i
+         newCSPy = startingCSPy
+         for i in range(8):
+          newCSPx += CSPgap*i
+          newCSPx = startingCSPx
+          allCSPx.append(newCSPx)
+        allCSPy.append(newCSPy)
+        print(allCSPx, allCSPy)
+    imglen, imgwid, = imgres.split("x")
+    imglen = int(imglen)
+    imgwid = int(imgwid)
+    allPixelx = []
+    allPixely = []
+    for i in range(imglen):
+      for i in range(imgwid):
+        raise NotImplementedError
+elif method == "robloxpaint":
+   raise NotImplementedError
