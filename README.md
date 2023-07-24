@@ -11,4 +11,4 @@ PaintBot consists of 2 things:
 
 ### Console
 
-[ Work in progress ]
+The console does all the math and management, To use it you need to first download the latest [release of PaintBot](https://github.com/wuntist/PaintBot/releases)
