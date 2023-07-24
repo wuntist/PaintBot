@@ -6,29 +6,34 @@ try:
     import time
     from PIL import Image
     from storage.pyroblox.pyroblox import Chat, Window
+    from storage.pyroblox.pyroblox import *
     from storage.filesys.file import *
 except ImportError:
     print("Could not import libraries.")
 
 method = sys.argv[1]
-imgres = sys.argv[2]
-vip = sys.argv[3]
-image = sys.argv[4]
+vip = sys.argv[2]
+sc_res = sys.argv[3]
+scrlen, scrwid, = sc_res.split("x")
+srclen = int(scrlen)
+scrwid = int(scrwid)
 
 readFileData()
 
-keyboard.press("shift")
-time.sleep(0.2)
-keyboard.release("shift")
-Window.click(960,960)
-
-Chat.say("!shout PaintBot Started Drawing.")
-subprocess.call(["C:\Program Files\AutoHotkey\AutoHotkey.exe", "storage/vk2di.ahk"])
+if RoID == 0:
+  keyboard.press("shift")
+  time.sleep(0.2)
+  keyboard.release("shift")
+  Window.click(960,960)
+  Chat.say("!shout PaintBot Started Drawing.")
+  subprocess.call(["C:\Program Files\AutoHotkey\AutoHotkey.exe", "storage/vk2di.ahk"])
+else:
+  print("Roblox not found")
 
 
 if method == "blockatepaint":
     if vip == "True":
-      print("CSP Calculator Skipped")
+      pass
     else:
       if vip == "False":
         allCSPx = []
@@ -50,13 +55,10 @@ if method == "blockatepaint":
           allCSPx.append(newCSPx)
         allCSPy.append(newCSPy)
         print(allCSPx, allCSPy)
-    imglen, imgwid, = imgres.split("x")
-    imglen = int(imglen)
-    imgwid = int(imgwid)
     allPixelx = []
     allPixely = []
-    for i in range(imglen):
-      for i in range(imgwid):
+    for i in range(scrlen):
+      for i in range(scrwid):
         raise NotImplementedError
 elif method == "robloxpaint":
    raise NotImplementedError

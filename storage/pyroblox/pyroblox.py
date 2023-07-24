@@ -12,7 +12,7 @@ try:
  ROBLOXINSTANCE = gw.getWindowsWithTitle("Roblox")[0]
 except IndexError:
  print(f"Roblox not found, pyroblox is quitting.")
- exit()
+ RoID = 1
 
 class Window:
  def focus():
@@ -20,8 +20,8 @@ class Window:
  def click(x,y,delay=0.04):
   Window.focus()
   win32api.SetCursorPos(x,y)
-  pydirectinput.moveTo(x,y)
   win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN,0,0)
+  pydirectinput.moveTo(x,y)
   time.sleep(delay)
   win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,0,0)
 class Chat:
